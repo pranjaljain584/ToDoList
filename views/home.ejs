@@ -1,11 +1,99 @@
 <html>
     <head>
         <title> <%= title %> </title>
+
+        <!-- bootstrap cdn -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <!-- CSS FILE LINKING -->
+        <link rel="stylesheet" href="css/home.css" type="text/css" >
     </head>
 
     <body>
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="profile">
+                    </div>
 
-        <h1>Hello this is home ejs</h1>
+                    <div class="d-inline-block my-3 mx-4">
+                        <span id="intro">Welcome</span>
+                        <p id="userName">Name</p>
+                        <!-- <span>Name</span> -->
+                    </div>
+
+                </div>
+        
+                <ul class="list-unstyled components">
+
+                    <li>
+                        <a href="#"><img src="https://img.icons8.com/color/32/000000/calendar-12.png"/><span class="ml-3">Today</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="https://img.icons8.com/cotton/32/000000/calendar.png"/><span class="ml-3">Next 7 Days</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#d1" data-toggle="collapse" class="dropdown-toggle">
+                            <i class="fas fa-list-ul"></i><span class="ml-2">Categories</span>
+                        </a>
+                        <ul class="collapse list-unstyled" id="d1">
+                            <li>
+                                <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> Work</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>Study</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-ellipsis-h mr-3"></i>Other</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#d2" data-toggle="collapse" class="dropdown-toggle">
+                            <i class="fas fa-list-ul"></i><span class="ml-2">Priority</span>
+                        </a>
+                        <ul class="collapse list-unstyled" id="d2">
+                            <li>
+                                <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> Work</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>Study</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-ellipsis-h mr-3"></i>Other</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+
+        <main>
+            
+        </main>
+
+
+
+        <!-- bootstrap cdn -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- our js file linking -->
+
+        <script src="js/home.js" ></script>
         
     </body>
 </html>
