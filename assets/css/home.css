@@ -6,7 +6,8 @@ body{
 
 .wrapper {
     display: flex;
-    width: 100%;
+    width: 250px;
+    height: 100%;
 }
 
 #sidebar.active {
@@ -19,7 +20,7 @@ body{
     top: 0;
     left: 0;
     height: 100vh;
-    z-index: 999;
+    /* z-index: 999; */
     color: #fff;
     transition: all 0.3s;
 }
@@ -44,7 +45,7 @@ a, a:hover, a:focus {
 
 #sidebar {
     /* 146668 177779*/
-    background: #177779; 
+    background: #177779;
     color: #fff;
     transition: all 0.3s;
 }
@@ -55,7 +56,8 @@ a, a:hover, a:focus {
 }
 
 .sidebar-header{
-    height: 120px;
+    height: 190px;
+    width: 250px;
 }
 
 #sidebar ul.components {
@@ -100,18 +102,6 @@ ul ul a {
     background-size: cover;
     background-position: center;
 }
-/* 
-#NameInput{
-    border-radius: 2rem;
-    font-size: 1rem;
-    margin-top: 10%;
-    float: right;
-    outline: none;
-    border: 1.5px solid #177779;
-    padding: 0.3rem 1rem;
-    color: #666;
-    background-color: white;
-} */
 
 #intro{
     font-size: 1rem;
@@ -130,4 +120,171 @@ li i {
     font-size: 1.5rem;
     margin-right: 5%;
     margin-left: 2%;
+}
+
+.wrapper{
+    display: inline-block;
+    height: auto;
+}
+
+main{
+    display: inline-block ;
+    vertical-align: top;
+    width: 83.7%;
+    height: 100%;
+    margin-left: 250px;
+    /* background-color: yellow; */
+}
+
+
+#NameInput{
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin-top: 10%;
+    outline: none;
+    border: 0.05px solid #177779;
+    box-shadow: 0px 0px 40px 1px #269294;
+    padding: 0.3rem 1rem;
+    color: #666;
+    background-color: white;
+}
+
+#ip{
+    position: absolute;
+    display: block;
+    left: 80%;
+}
+
+#ip input {
+    width: auto;
+    margin-top: 12%;
+}
+
+.welcome{
+    height: auto;
+    width: 35%;
+    border-radius: 2rem;
+    margin-top: 8%;
+    margin-left: 5%;
+    box-shadow: 0px 0px 40px 1px #177779;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.main-area{
+    display: flex ;
+    justify-content: space-around;
+}
+
+.task{
+    height: 490px; 
+    width: 460px;
+    background-color: white;
+    margin-top: 4%;
+    border-radius: 1rem;
+    margin-left: -4%;
+    box-shadow: 0px 0px 40px 1px #177779;
+}
+
+hr{
+    margin-top: -5%;
+    border-top: 1px solid white;
+}
+
+.addTask{
+    margin-left: 15%;
+    margin-top: 3%;
+    width: 70%;
+    color: white;
+}
+
+.addTask{
+    background-color: rgb(214, 202, 202);
+    background-color: rgb(27, 25, 25);
+}
+
+.btn:focus , .btn:hover{
+    box-shadow: 0 0 0 0.1rem transparent;
+    color: white;
+}
+
+.modal-header{
+    background-color: #2BBBAD;
+    color: white;
+}
+
+.close{
+    color: white !important;
+}
+
+.modal-body i {
+    color: #2BBBAD;
+}
+
+.taskip{
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgba(38,146,148,0.6);
+    color: #666;
+    padding: 0.3rem;
+}
+
+#taskName{
+    width: 87%;
+    font-size: 1.5rem;
+    margin-left: 3%;
+    float: left;
+}
+
+#taskDate{
+    float: left;
+    margin-left: 3%;
+    font-size: 1.2rem;
+}
+
+#category{
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+    font-size: 1.2rem;
+}
+
+input:focus , select:focus{
+    outline: none;
+}
+
+#priority{
+    margin-top: 25%;
+    padding-left: 4%;
+}
+
+#priority p {
+    color: rgb(100, 97, 97);
+    font-size: 1.3rem ;
+    font-weight: 500;
+}
+
+.btn-warning{
+    background-color: #F9D21F !important;
+}
+
+textarea{
+    color: #757575;
+    display: block;
+    outline: none;
+    /* resize: none; */
+    border-radius: 8px;
+    border: 1px solid rgba(38,146,148,0.6);
+    padding: 0.5rem;
+    color: #666;
+    box-shadow: inset 0 0 0.25rem #ddd;
+}
+
+.hr2{
+    border-top: 1px solid rgba(143, 143, 143, 0.945);
+}
+
+form i{
+    color: white !important;
 }

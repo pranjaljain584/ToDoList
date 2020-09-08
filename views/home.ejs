@@ -6,91 +6,208 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <!-- font awesome -->
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        
+        <!-- animate css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
         <!-- CSS FILE LINKING -->
         <link rel="stylesheet" href="css/home.css" type="text/css" >
     </head>
 
     <body>
-        <div class="wrapper">
-            <!-- Sidebar -->
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                    <div class="profile">
+        
+
+        <div id="content">
+            <div class="wrapper">
+                <!-- Sidebar -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <div class="profile">
+                        </div>
+    
+                        <div class="d-inline-block my-3 mx-4">
+                            <span id="intro">Welcome</span>
+                            <p id="userName">User</p>
+                            <!-- <span>Name</span> -->
+                        </div>
+
+                        <hr>
+
+                        <div>
+                            <button class="addTask btn" type="button" data-toggle="modal" data-target="#addTaskModal" data-backdrop="true">
+                                <i class="fas fa-plus"></i> &nbsp; ADD TASK
+                            </button>
+
+                        </div>
+    
+                    </div>
+            
+                    <ul class="list-unstyled components">
+    
+                        <li>
+                            <a href="#"><img src="https://img.icons8.com/color/32/000000/calendar-12.png"/><span class="ml-3">Today</span></a>
+                        </li>
+    
+                        <li>
+                            <a href="#"><img src="https://img.icons8.com/cotton/32/000000/calendar.png"/><span class="ml-3">Next 7 Days</span></a>
+                        </li>
+    
+                        <li>
+                            <a href="#"><img src="https://img.icons8.com/cotton/32/000000/pen.png"/><span class="ml-3">All Tasks</span></a>
+                        </li>
+    
+                        <li>
+                            <a href="#d1" data-toggle="collapse" class="dropdown-toggle">
+                                <i class="fas fa-list-ul"></i><span class="ml-2">Categories</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="d1">
+                                <li>
+                                    <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> Work</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>Study</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img class="mr-3" <img src="https://img.icons8.com/fluent/32/000000/more.png"/>Other</a>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <a href="#d2" data-toggle="collapse" class="dropdown-toggle">
+                                <i class="fas fa-list-ul"></i><span class="ml-2">Priority</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="d2">
+                                <li>
+                                    <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> less important</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>moderate important</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>very important</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#"><i class="fas fa-ellipsis-h mr-3"></i>Other</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                    </ul>
+            
+                </nav>
+            </div>
+            
+    
+            <main>
+    
+                
+                <div id="ip">
+                    <input type="text" id="NameInput" placeholder="Enter Your Name">
+
+                    <!-- <div class="welcome"> toDoey</div> -->
+                </div>
+    
+                <div class="welcome d-inline-block">
+                    <span> Hello <span id="userName2"></span> , Welcome to To Do ! </span>
+                </div>
+
+                <div class="main-area">
+
+                    <div class="task" id="task-list">
+                        
                     </div>
 
-                    <div class="d-inline-block my-3 mx-4">
-                        <span id="intro">Welcome</span>
-                        <p id="userName">Name</p>
-                        <!-- <span>Name</span> -->
+                    <div class="task" id="task-det">  
+
                     </div>
 
                 </div>
-        
-                <ul class="list-unstyled components">
-
-                    <li>
-                        <a href="#"><img src="https://img.icons8.com/color/32/000000/calendar-12.png"/><span class="ml-3">Today</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><img src="https://img.icons8.com/cotton/32/000000/calendar.png"/><span class="ml-3">Next 7 Days</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#d1" data-toggle="collapse" class="dropdown-toggle">
-                            <i class="fas fa-list-ul"></i><span class="ml-2">Categories</span>
-                        </a>
-                        <ul class="collapse list-unstyled" id="d1">
-                            <li>
-                                <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> Work</a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>Study</a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-ellipsis-h mr-3"></i>Other</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#d2" data-toggle="collapse" class="dropdown-toggle">
-                            <i class="fas fa-list-ul"></i><span class="ml-2">Priority</span>
-                        </a>
-                        <ul class="collapse list-unstyled" id="d2">
-                            <li>
-                                <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> Work</a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>Study</a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-ellipsis-h mr-3"></i>Other</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-        
-            </nav>
+                
+            </main>
         </div>
 
-        <main>
-            
-        </main>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog">
+
+            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                <div class="modal-content card card-image">
+
+                <!-- Content -->
+
+                <div class="modal-header">
+                    <h3 class="modal-title w-100 font-weight-bold" id="exampleModalLongTitle"> Add Task </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
 
+		       <!--Body-->
+		       <div class="modal-body">
+		         <div class="text-center">
+		           <i class="fas fa-check fa-4x mb-3 animate__animated animate__rotateIn"></i>
+                   
+                   <form action="">
+
+                    <input required type="text" class="taskip mb-4" id="TaskName" placeholder="I want to...">
+                    <input required type="date" class="taskip mb-2" id="TaskDate" placeholder="Due Date">
+                    <select class="taskip mt-1" id="category">
+                        <option value="null" selected>Category</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Study">Study</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <br>
+
+                    <div id="priority" class="d-block">
+                        <p class="text-left">Priority</p>
+                        <div class="d-flex flex-wrap px-2">
+                            <div><button type="button" class="mr-3 btn btn-sm btn-danger btn-rounded">Important</button></div>
+                            <div><button type="button" class="mr-3 btn btn-sm btn-warning btn-rounded">Moderate</button></div>
+                            <div><button type="button" class="mr-3 btn btn-sm btn-success btn-rounded">Not Urgent</button></div>
+                        </div>
+                    </div>
+
+                    <textarea cols="52" rows="2" class="ml-3 mt-4" placeholder="Optional Description.."></textarea>
+
+                    <hr class="hr2 mt-4">
+
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn btn-lg btn-info waves-effect waves-light"> Add
+                            <i class="fa fa-paper-plane ml-1"></i>
+                        </button>
+                   </div>
+
+                   </form>
+
+		         </div>
+		       </div>
+
+		     </div>
+		     <!--/.Content-->
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- bootstrap cdn -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
         <!-- our js file linking -->
 
         <script src="js/home.js" ></script>
