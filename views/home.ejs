@@ -153,11 +153,11 @@
 		         <div class="text-center">
 		           <i class="fas fa-check fa-4x mb-3 animate__animated animate__rotateIn"></i>
                    
-                   <form action="">
+                   <form action="/addTask" method="POST">
 
-                    <input required type="text" class="taskip mb-4" id="TaskName" placeholder="I want to...">
-                    <input required type="date" class="taskip mb-2" id="TaskDate" placeholder="Due Date">
-                    <select class="taskip mt-1" id="category">
+                    <input required type="text" name="taskName" class="taskip mb-4" id="TaskName" placeholder="I want to...">
+                    <input required type="date" name="taskDate" class="taskip mb-2" id="TaskDate" placeholder="Due Date">
+                    <select class="taskip mt-1" name="category" id="category">
                         <option value="null" selected>Category</option>
                         <option value="Work">Work</option>
                         <option value="Personal">Personal</option>
