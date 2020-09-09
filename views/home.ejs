@@ -112,6 +112,16 @@
 
                     <div class="task" id="task-list">
                         
+                        <ul>
+                            <% for(let i of task_list){ %>
+                                <li>
+                                    <p><%= i.taskName %></p>
+                                    <p><%= i.taskDate %></p>
+
+                                </li>
+                            <% } %>
+                        </ul>
+
                     </div>
 
                     <div class="task" id="task-det">  

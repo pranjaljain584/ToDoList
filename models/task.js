@@ -13,11 +13,17 @@ const taskSchema = new mongoose.Schema({
         required: true
     }, 
 
-    category : String ,
+    category : {
+        type: String 
+    },
 
-    priorty : String ,
+    // priorty : {
+    //     type: String 
+    // },
 
-    description : String
+    // description : {
+    //     type: String
+    // }
 
 }) ;
 
