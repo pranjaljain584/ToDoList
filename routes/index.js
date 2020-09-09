@@ -12,9 +12,9 @@ router.get('/' , homeController.home) ;
 // for any request with prefix /category
 router.use('/category' , require('./category')) ;
 
-router.get('/today' ,) ;
+router.get('/today' , homeController.today) ;
 
-router.get('/nextSevenDays' , ) ;
+router.get('/nextSevenDays' , homeController.nextSevenDays ) ;
 
 // post router
 router.post('/addTask' , homeController.addTask) ;

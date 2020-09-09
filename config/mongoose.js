@@ -8,4 +8,7 @@ db.on('error' , console.error.bind(console , 'error db')) ;
 // up and running
 db.once('open' , function(){
     console.log("db success") ;
-})
+});
+
+// export database
+module.exports =db ;
