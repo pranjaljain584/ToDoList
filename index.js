@@ -13,11 +13,11 @@ const port =8000 ;
 // parser that will help decoding form's data
 app.use(express.urlencoded()) ;
 
-// use express router
-app.use('/' , require('./routes/index')) ;
-
 // use static files
 app.use(express.static('./assets')) ;
+
+// use express router
+app.use('/' , require('./routes/index')) ;
 
 // set up view engine
 app.set('view engine' , 'ejs') ;

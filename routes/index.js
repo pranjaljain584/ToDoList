@@ -10,7 +10,7 @@ const homeController = require('../controllers/home_controller') ;
 router.get('/' , homeController.home) ;
 
 // for any request with prefix /category
-// router.use('/category' , require('./category')) ;
+router.use('/category' , require('./category')) ;
 
 // router.get('/today' , homeController.today) ;
 

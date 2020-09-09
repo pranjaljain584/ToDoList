@@ -22,23 +22,21 @@ module.exports.home = function(req,res){
 module.exports.addTask = function(req,res){
 
     TasksList.create({
+        
         taskName : req.body.taskName ,
         taskDate : req.body.taskDate ,
         category : req.body.category
+
     }, function(err, newTask){
+
         if(err){
             console.log('err in creating task') ;
             return ;
         }
-
         // console.log('******' , newTask) ;
-
         return res.redirect('back') ;
 
-    })
-
-    // console.log(req.body) ;
-    // return res.redirect('back') ;
+    });
 };
 
 // module.exports.today=function(req,res){
