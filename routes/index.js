@@ -12,6 +12,9 @@ router.get('/' , homeController.home) ;
 // for any request with prefix /category
 router.use('/category' , require('./category')) ;
 
+// for any request with prefix /priority
+router.use('/priority' , require('./priority')) ;
+
 // router.get('/today' , homeController.today) ;
 
 // router.get('/nextSevenDays' , homeController.nextSevenDays ) ;

@@ -9,7 +9,7 @@ const taskSchema = new mongoose.Schema({
     },
 
     taskDate : {
-        type: Date ,
+        type: String ,
         required: true
     }, 
 
@@ -17,13 +17,13 @@ const taskSchema = new mongoose.Schema({
         type: String 
     },
 
-    // priorty : {
-    //     type: String 
-    // },
+    priority : {
+        type: String 
+    },
 
-    // description : {
-    //     type: String
-    // }
+    description : {
+        type: String
+    }
 
 }) ;
 

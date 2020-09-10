@@ -2,9 +2,9 @@
 const db = require('../config/mongoose') ;
 const TasksList = require('../models/task') ;
 
-module.exports.study=function(req,res){
+module.exports.imp=function(req,res){
 
-    TasksList.find({category : "Study"} ,function(err, tasks){
+    TasksList.find({priority : "imp"} ,function(err, tasks){
         if(err){
             console.log('error in fetching contact from db') ;
             return ;
@@ -20,8 +20,8 @@ module.exports.study=function(req,res){
     });
 };
 
-module.exports.personal=function(req,res){
-    TasksList.find({category : "Personal"} ,function(err, tasks){
+module.exports.urgent=function(req,res){
+    TasksList.find({priority : "urgent"} ,function(err, tasks){
         if(err){
             console.log('error in fetching contact from db') ;
             return ;
@@ -35,8 +35,8 @@ module.exports.personal=function(req,res){
     });
 };
 
-module.exports.work=function(req,res){
-    TasksList.find({category: "Work"} ,function(err, tasks){
+module.exports.notUrgent=function(req,res){
+    TasksList.find({priority : "notUrgent"} ,function(err, tasks){
         if(err){
             console.log('error in fetching contact from db') ;
             return ;
@@ -50,8 +50,8 @@ module.exports.work=function(req,res){
     });
 };
 
-module.exports.other=function(req,res){
-    TasksList.find({category: "Other"} ,function(err, tasks){
+module.exports.notImp=function(req,res){
+    TasksList.find({priority : "notImp"} ,function(err, tasks){
         if(err){
             console.log('error in fetching contact from db') ;
             return ;

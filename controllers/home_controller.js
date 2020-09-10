@@ -25,7 +25,9 @@ module.exports.addTask = function(req,res){
         
         taskName : req.body.taskName ,
         taskDate : req.body.taskDate ,
-        category : req.body.category
+        category : req.body.category ,
+        description : req.body.description ,
+        priority : req.body.priority
 
     }, function(err, newTask){
 
@@ -33,7 +35,7 @@ module.exports.addTask = function(req,res){
             console.log('err in creating task') ;
             return ;
         }
-        // console.log('******' , newTask) ;
+        console.log('******' , newTask) ;
         return res.redirect('back') ;
 
     });

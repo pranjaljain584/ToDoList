@@ -72,7 +72,7 @@
                                     <a href="/category/personal"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>Personal</a>
                                 </li>
                                 <li>
-                                    <a href="#"><img class="mr-3" <img src="https://img.icons8.com/fluent/32/000000/more.png"/>Other</a>
+                                    <a href="/category/other"><img class="mr-3" src="https://img.icons8.com/fluent/32/000000/more.png"/>Other</a>
                                 </li>
                             </ul>
                         </li>
@@ -83,13 +83,16 @@
                             </a>
                             <ul class="collapse list-unstyled" id="d2">
                                 <li>
-                                    <a href="#"><img class="mr-2" src="https://img.icons8.com/plasticine/32/000000/work.png"/> less important</a>
+                                    <a href="/priority/imp"><i class="fas fa-exclamation-circle" style="color: rgb(211, 52, 52);"></i> Important</a>
                                 </li>
                                 <li>
-                                    <a href="#"><img class="mr-3" src="https://img.icons8.com/plasticine/32/000000/saving-book.png"/>moderate important</a>
+                                    <a href="/priority/urgent"><i class="fas fa-exclamation-circle" style="color: yellow;"></i> Urgent</a>
                                 </li>
                                 <li>
-                                    <a href="#"><img class="mr-3"src="https://img.icons8.com/dusk/32/000000/spiral-bound-booklet.png"/>very important</a>
+                                    <a href="/priority/notUrgent"><i class="fas fa-exclamation-circle" style="color: rgb(32, 153, 201);"></i> Not Urgent</a>
+                                </li>
+                                <li>
+                                    <a href="/priority/notImp"><i class="fas fa-exclamation-circle" style="color: green;"></i> Not Important</a>
                                 </li>
                             </ul>
                         </li>
@@ -119,7 +122,8 @@
                                 <li>
                                     <p><%= i.taskName %></p>
                                     <p><%= i.taskDate %></p>
-
+                                    <p><%= i.category %></p>
+                                    <p><%= i.description %></p>
                                 </li>
                             <% } %>
                         </ul>
@@ -174,15 +178,54 @@
                     <br>
 
                     <div id="priority" class="d-block">
-                        <p class="text-left">Priority</p>
-                        <div class="d-flex flex-wrap px-2">
-                            <div><button type="button" class="mr-3 btn btn-sm btn-danger btn-rounded">Important</button></div>
-                            <div><button type="button" class="mr-3 btn btn-sm btn-warning btn-rounded">Moderate</button></div>
-                            <div><button type="button" class="mr-3 btn btn-sm btn-success btn-rounded">Not Urgent</button></div>
+                        <span class="text-left p-head">Priority</span>
+                        <br>
+                        <br>
+                        <div class="custom-radios">
+                        
+                            <div>
+                                <input name="priority" type="radio" id="color-1" value="imp" checked>
+                                <label for="color-1">
+                                <span>
+                                    <img class="tick" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input name="priority" type="radio" id="color-2" value="urgent">
+                                <label for="color-2">
+                                <span>
+                                    <img class="tick" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+                            
+                            <div>
+                                <input name="priority" type="radio" id="color-3" value="notUrgent">
+                                <label for="color-3">
+                                <span>
+                                    <img class="tick" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input name="priority" type="radio" id="color-4" value="notImp">
+                                <label for="color-4">
+                                <span>
+                                    <img class="tick" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                                </span>
+                                </label>
+                            </div>
                         </div>
+
+                        <br>
+                        <br>
+
                     </div>
 
-                    <textarea cols="52" rows="2" class="ml-3 mt-4" placeholder="Optional Description.."></textarea>
+                    <textarea name="description" cols="52" rows="2" class="ml-3 mt-4" placeholder="Optional Description.."></textarea>
 
                     <hr class="hr2 mt-4">
 
