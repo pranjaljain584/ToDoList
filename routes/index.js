@@ -15,9 +15,11 @@ router.use('/category' , require('./category')) ;
 // for any request with prefix /priority
 router.use('/priority' , require('./priority')) ;
 
-// router.get('/today' , homeController.today) ;
+router.get('/today' , homeController.today) ;
 
-// router.get('/nextSevenDays' , homeController.nextSevenDays ) ;
+router.get('/duePassed' , homeController.duePassed) ;
+
+router.get('/nextSevenDays' , homeController.nextSevenDays ) ;
 
 // post router
 router.post('/addTask' , homeController.addTask) ;

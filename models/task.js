@@ -23,6 +23,10 @@ const taskSchema = new mongoose.Schema({
 
     description : {
         type: String
+    },
+
+    created: {
+        type: String 
     }
 
 }) ;
