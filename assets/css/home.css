@@ -76,9 +76,14 @@ body{
     top: 0;
     left: 0;
     height: 100vh;
-    /* z-index: 999; */
+    overflow-y: scroll;
+    overflow-x: hidden;
     color: #fff;
     transition: all 0.3s;
+}
+
+#sidebar::-webkit-scrollbar{
+	display: none;
 }
 
 a[data-toggle="collapse"] {
@@ -193,7 +198,7 @@ main{
 }
 
 
-#NameInput{
+/* #NameInput{
     border-radius: 2rem;
     font-size: 1rem;
     margin-top: 10%;
@@ -203,22 +208,29 @@ main{
     padding: 0.3rem 1rem;
     color: #666;
     background-color: white;
-}
+} */
 
 #ip{
     position: absolute;
     display: block;
-    left: 80%;
+    left: 90%;
+    top: 3%;
+    background-color: white;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
 }
 
-#ip input {
-    width: auto;
+#ip i {
     margin-top: 12%;
+    margin-left: 12%;
+    font-size: 3.5rem;
+    color: #2BBBAD;
 }
 
 .welcome{
     height: auto;
-    width: 35%;
+    width: 25%;
     border-radius: 2rem;
     margin-top: 8%;
     margin-left: 5%;
@@ -227,21 +239,6 @@ main{
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
     font-weight: 700;
-}
-
-.main-area{
-    display: flex ;
-    justify-content: space-around;
-}
-
-.task{
-    height: 490px; 
-    width: 460px;
-    background-color: white;
-    margin-top: 4%;
-    border-radius: 1rem;
-    margin-left: -4%;
-    box-shadow: 0px 0px 40px 1px #177779;
 }
 
 hr{
@@ -345,4 +342,68 @@ textarea{
 
 form i{
     color: white !important;
+}
+
+.task{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.task::-webkit-scrollbar{
+	display: none;
+}
+
+.main-area{
+    display: flex ;
+    justify-content: space-around;
+}
+
+.task{
+    height: 490px; 
+    width: 460px;
+    /* background-color: #f4f9f4 ; */
+    background-color: #fafafa;
+    margin-top: 4%;
+    border-radius: 1rem;
+    margin-left: -4%;
+    box-shadow: 0px 0px 40px 1px #177779;
+}
+
+#taskHead{
+    margin: 3% 5% ;
+    margin-bottom: 5%;
+    font-weight: 650;
+    font-size: 1.5rem;
+}
+
+.task-list{
+    background-color: white;
+    /* background-color: #faf9f9; */
+    border: 0.5px solid #dfdfdf;
+    margin: 4% 5% 2% -4% ;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    border-radius: 0.5rem;
+    padding: 5px 15px;
+    padding-bottom: 0px;
+    box-shadow: 0px 0px 10px 0.5px #dfdfdf;
+}
+
+.task-list span {
+    font-size: 1.1rem;
+}
+
+.task-list input {
+    vertical-align: top;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.task-list p {
+    font-size: 0.9rem;
+    margin-top: 1%;
+}
+
+ul{
+    list-style: none;
 }

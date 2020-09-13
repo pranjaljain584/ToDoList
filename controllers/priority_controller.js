@@ -14,7 +14,8 @@ module.exports.imp=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Important Tasks"
         }) ;
 
     });
@@ -29,7 +30,8 @@ module.exports.urgent=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Urgent Tasks"
         }) ;
 
     });
@@ -44,7 +46,8 @@ module.exports.notUrgent=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Not Urgent Tasks"
         }) ;
 
     });
@@ -59,7 +62,8 @@ module.exports.notImp=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Not Important Tasks"
         }) ;
 
     }); 

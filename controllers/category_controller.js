@@ -14,7 +14,8 @@ module.exports.study=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Study Tasks"
         }) ;
 
     });
@@ -29,7 +30,8 @@ module.exports.personal=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Personal Tasks"
         }) ;
 
     });
@@ -44,7 +46,8 @@ module.exports.work=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Work Tasks"
         }) ;
 
     });
@@ -59,7 +62,8 @@ module.exports.other=function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "Other Tasks"
         }) ;
 
     }); 

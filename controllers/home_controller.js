@@ -12,7 +12,8 @@ module.exports.home = function(req,res){
 
         return res.render('home' , {
             title : "To Do List" , 
-            task_list :  tasks
+            task_list :  tasks ,
+            sub_title : "All Tasks"
         }) ;
 
     });
@@ -35,7 +36,7 @@ module.exports.addTask = function(req,res){
             console.log('err in creating task') ;
             return ;
         }
-        console.log('******' , newTask) ;
+        // console.log('******' , newTask) ;
         return res.redirect('back') ;
 
     });
