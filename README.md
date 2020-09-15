@@ -14,11 +14,11 @@ Will start the server at [http://localhost:8000](http://localhost:8000)
 
 ## features 
 
-1. Does Filtering on the basis of
-    a. Due Date
-    b. Category
-    c. Priority
+- Does Filtering on the basis of
+    - Due Date
+    - Category
+    - Priority
 
-2. each list is sorted on the basis of date and if it is completed or not
+- Each list is sorted on the basis of date and if it is completed or not
 
-3. see detail of each task
+- See detail of each task
