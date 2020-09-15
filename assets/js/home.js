@@ -41,7 +41,11 @@ $(".det-btn").click(function(){
         $('.p-btn').css("background-color" , "#2ECC71") ;  
     }
 
-    $("#tde").html(description);
+    if(description==""){
+        $("#tde").html(".");
+    }else{
+        $("#tde").html(description);
+    }
 
     $("#delete-task-btn").attr('href' , `/delete-contact/?id=${id}`) ;
 
