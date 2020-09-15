@@ -18,7 +18,7 @@ module.exports.study=function(req,res){
             sub_title : "Study Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.personal=function(req,res){
@@ -34,7 +34,7 @@ module.exports.personal=function(req,res){
             sub_title : "Personal Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.work=function(req,res){
@@ -50,7 +50,7 @@ module.exports.work=function(req,res){
             sub_title : "Work Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.other=function(req,res){
@@ -66,5 +66,5 @@ module.exports.other=function(req,res){
             sub_title : "Other Tasks"
         }) ;
 
-    }); 
+    }).sort({striked: 1}); 
 };

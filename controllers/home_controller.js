@@ -27,7 +27,7 @@ module.exports.home = function(req,res){
             sub_title : "All Tasks"
         });
 
-    }).sort({taskDate : 1});
+    }).sort({striked: 1}).sort({taskDate : 1});
 
 };
 
@@ -40,7 +40,7 @@ module.exports.addTask = function(req,res){
         category : req.body.category ,
         description : req.body.description ,
         priority : req.body.priority ,
-        created : req.body.taskDate
+        created : req.body.taskDate 
 
     }, function(err, newTask){
 
@@ -70,6 +70,36 @@ module.exports.deleteTask = function(req,res){
 
 } ;
 
+module.exports.checkTask = function(req,res){
+    let id = req.query.id ;
+
+    TasksList.findByIdAndUpdate(id , {striked : 'true'} , function(err){
+
+        if(err){
+            console.log("err in updating task from db") ;
+            return ;
+        }
+
+        return res.redirect('back') ;
+    });
+
+};
+
+module.exports.uncheckTask = function(req,res){
+    let id = req.query.id ;
+
+    TasksList.findByIdAndUpdate(id , {striked : "false"} , function(err){
+
+        if(err){
+            console.log("err in updating task from db") ;
+            return ;
+        }
+
+        return res.redirect('back') ;
+    });
+
+};
+
 module.exports.today=function(req,res){
     
     TasksList.find({created: {$eq: date}} ,function(err, tasks){
@@ -85,7 +115,7 @@ module.exports.today=function(req,res){
             sub_title : "Due Today"
         }) ;
 
-    });
+    }).sort({striked: 1});
 
 };
 
@@ -104,7 +134,7 @@ module.exports.duePassed=function(req,res){
             sub_title : "Due Date Passed"
         }) ;
 
-    });
+    }).sort({striked: 1});
 
 };
 
@@ -123,6 +153,6 @@ module.exports.nextSevenDays=function(req,res){
             sub_title : "Due in 7 Days"
         }) ;
 
-    });
+    }).sort({striked: 1});
 
 };

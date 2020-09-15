@@ -1,5 +1,15 @@
 
-// var idDiv = $("#Details") ;
+// $('#check').click(function(){
+//     if($(this).prop("checked") == true){
+//         console.log("Checkbox is checked.");
+//         $("#t-det").addClass("strike");
+//     }
+//     else if($(this).prop("checked") == false){
+//         console.log("Checkbox is unchecked.");
+//         $("#t-det").removeClass("strike");
+
+//     }
+// });
 
 $(".det-btn").click(function(){
     let taskName = $(this).attr('data-name') ; 
@@ -8,7 +18,8 @@ $(".det-btn").click(function(){
     let priority = $(this).attr('data-priority') ; 
     let description = $(this).attr('data-description') ; 
     let id = $(this).attr('data-id') ;
-    console.log(taskName, taskDate , category , priority , description , id) ;
+    let striked = $(this).attr('data-striked') ;
+
     $("#tnm").html( taskName );
     $("#tdt").html( taskDate );
     $("#tcg").html( category );
@@ -47,6 +58,19 @@ $(".det-btn").click(function(){
         $("#tde").html(description);
     }
 
-    $("#delete-task-btn").attr('href' , `/delete-contact/?id=${id}`) ;
+    $("#delete-task-btn").attr('href' , `/delete-task/?id=${id}`) ;
+
+
+    $('#comp-task-btn').click(function() {
+
+        if(striked == "true"){
+            
+            $("#comp-task-btn").attr('href' , `/uncheck-task/?id=${id}`) ;
+        }else{
+            $("#comp-task-btn").attr('href' , `/check-task/?id=${id}`) ;
+        }
+    });
+    
+
 
 }) ; 

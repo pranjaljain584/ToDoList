@@ -27,6 +27,11 @@ const taskSchema = new mongoose.Schema({
 
     created: {
         type: String 
+    } ,
+
+    striked: {
+        type:Boolean ,
+        default:false
     }
 
 }) ;
