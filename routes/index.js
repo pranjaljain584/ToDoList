@@ -24,6 +24,8 @@ router.get('/nextSevenDays' , homeController.nextSevenDays ) ;
 // post router
 router.post('/addTask' , homeController.addTask) ;
 
+router.get('/delete-contact' , homeController.deleteTask) ;
+
 
 // exporting so that it is available to index file 
 module.exports = router ;

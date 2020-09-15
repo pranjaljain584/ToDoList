@@ -54,6 +54,22 @@ module.exports.addTask = function(req,res){
     });
 };
 
+module.exports.deleteTask = function(req,res){
+    let id = req.query.id ;
+    // console.log(id) ;
+
+    TasksList.findByIdAndDelete(id , function(err){
+
+        if(err){
+            console.log("err in del task from db") ;
+            return ;
+        }
+
+        return res.redirect('back') ;
+    });
+
+} ;
+
 module.exports.today=function(req,res){
     
     TasksList.find({created: {$eq: date}} ,function(err, tasks){

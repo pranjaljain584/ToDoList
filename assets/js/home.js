@@ -1,11 +1,15 @@
-// $(document).on("keypress" , "input" , function(e){
-//     if(e.which==13){
-//         var inputVal = $(this) .val() ;
-//         console.log(inputVal) ;
-//         var user = document.getElementById('userName') ;
-//         var user2 = document.getElementById('userName2') ;
-//         user.innerText = inputVal ;
-//         user2.innerText = inputVal ;
-//         $("#ip").remove() ;
-//     }
-// });
+
+// var idDiv = $("#Details") ;
+
+$(".det-btn").click(function(){
+    let taskName = $(this).attr('data-name') ; 
+    let taskDate = $(this).attr('data-date') ; 
+    let category = $(this).attr('data-category') ; 
+    let priority = $(this).attr('data-priority') ; 
+    let description = $(this).attr('data-description') ; 
+    let id = $(this).attr('data-id') ;
+    console.log(taskName, taskDate , category , priority , description , id) ;
+    // idDiv.html( taskName );
+    $("#delete-task-btn").attr('href' , `/delete-contact/?id=${id}`) ;
+
+}) ; 

@@ -54,7 +54,7 @@
                         </li>
 
                         <li>
-                            <a href="/duePassed"><img src="https://img.icons8.com/cotton/32/000000/calendar.png"/><span class="ml-3">Due Date Passed</span></a>
+                            <a href="/duePassed"><img src="https://img.icons8.com/office/32/000000/medium-risk.png"/><span class="ml-3">Due Date Passed</span></a>
                         </li>
     
                         <li>
@@ -108,31 +108,33 @@
     
             <main>
     
-                
+                <!-- <div> -->
                 <div id="ip">
                     <i class="fas fa-check fa-4x mb-3 animate__animated animate__rotateIn"></i>
+
                 </div>
+
+                <!-- </div> -->
     
                 <div class="welcome d-inline-block">
-                    <span> Hello , Welcome to Declutter ! </span>
+                    <span> Hello , Welcome to DeClutter ! </span>
                 </div>
 
                 <div class="main-area">
 
                     <div class="task">
 
-                        <h5 id="taskHead"><%= sub_title %></h5>
+                        <h5 class="taskHead"><%= sub_title %></h5>
                         
                         <ul>
                             <% for(let i of task_list){ %>
-                                <a href="#">
-                                    <li class="task-list">
+                                <a role="button">
+                                    <li class="task-list det-btn" data-name="<%= i.taskName %>" data-date="<%= i.taskDate %>" data-category="<%= i.category %>" data-description="<%= i.description %>" data-priority="<%= i.priority %>" data-id="<%= i._id %>">
                                         <input type="checkbox">
                                         <div class="d-inline-block">
                                             <span><%= i.taskName %></span>
                                             <p><%= i.taskDate %></p>
                                         </div>
-                                        <!-- <span><%= i.category %></span> -->
                                     </li>
                                 </a>
                             <% } %>
@@ -140,7 +142,19 @@
 
                     </div>
 
-                    <div class="task" id="task-det">  
+                    <div class="task" id="task-det">
+                        
+                        <h5 class="taskHead">Task Details</h5>
+
+                        <h6 id="tnm">Task Name</h6>
+                        <h6 id="tdt">Task date</h6>
+                        <h6 id="tcg">Task category</h6>
+                        <h6 id="tpr">Task Priority</h6>
+                        <h6 id="tde">Task Description</h6>
+
+                        <a href="" id="delete-task-btn"> Del </a>
+
+                        <!-- <p id="Details"></p> -->
 
                     </div>
 
@@ -265,10 +279,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+        <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         
         <!-- our js file linking -->
-
         <script src="js/home.js" ></script>
         
     </body>
