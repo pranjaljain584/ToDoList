@@ -144,17 +144,35 @@
 
                     <div class="task" id="task-det">
                         
-                        <h5 class="taskHead">Task Details</h5>
+                        <h6 class="taskHead text-center mb-5" style="font-weight: 400; font-size: 1.3rem;"><u>Task Details</u></h6>
 
-                        <h6 id="tnm">Task Name</h6>
-                        <h6 id="tdt">Task date</h6>
-                        <h6 id="tcg">Task category</h6>
-                        <h6 id="tpr">Task Priority</h6>
-                        <h6 id="tde">Task Description</h6>
+                        <h3 id="tnm">Task Name</h3>
+                        <span class="cmn">Due : <span id="tdt"></span></span>
 
-                        <a href="" id="delete-task-btn"> Del </a>
+                        <div>
+                            <button class="c-btn my-4 ml-4 d-inline-block btn"><span id="tcg">Category</span></button>
 
-                        <!-- <p id="Details"></p> -->
+                            <button class="p-btn my-4 ml-5 d-inline-block btn"><span id="tpr">Priority</span></button>
+                        </div>
+
+                        <span class="cmn">Notes :</span>
+                        <p class="mt-2" id="tde">&nbsp;</p>
+
+                        <div class="container">
+                            
+                            <div class="row">
+
+                                <a href="" class="d-inline btn-lg btn-danger col-6 btn" id="delete-task-btn">
+                                    <i class="fas fa-trash-alt"></i> &nbsp; Delete Task 
+                                </a>
+        
+                                <a href="" class="d-inline btn-lg btn-outline-info col-6 btn" id="delete-task-btn">
+                                    <i class="fas fa-check"></i> &nbsp; Mark As Done
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </div>
 

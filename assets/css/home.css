@@ -407,8 +407,41 @@ ul{
 
 /* task list code ends */
 
+.container .btn{
+    border-radius: 0 !important; 
+    padding: 3% 4%;
+    /* height: 100px !important; */
+}
 
-/* 
-#task-det{
-    border: 2px solid red;
-} */
+.container{
+    /* margin-top: 2.5%; */
+    position: relative;
+    /* bottom: 0; */
+    top: 83px;
+}
+
+#tnm{
+    font-weight: 600;
+    margin-left: 5%;
+    margin-bottom: 7%;
+    text-transform: capitalize;
+}
+
+.cmn{
+    margin-left: 5%;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+#tde{
+    margin-left: 10%;
+    font-size: 1rem;
+    color: #333;
+}
+
+#task-det button{
+    color: white;
+    font-size: 1.2rem;
+    width: 150px;
+}
