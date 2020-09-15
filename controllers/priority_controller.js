@@ -18,7 +18,7 @@ module.exports.imp=function(req,res){
             sub_title : "Important Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.urgent=function(req,res){
@@ -34,7 +34,7 @@ module.exports.urgent=function(req,res){
             sub_title : "Urgent Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.notUrgent=function(req,res){
@@ -50,7 +50,7 @@ module.exports.notUrgent=function(req,res){
             sub_title : "Not Urgent Tasks"
         }) ;
 
-    });
+    }).sort({striked: 1});
 };
 
 module.exports.notImp=function(req,res){
@@ -66,5 +66,5 @@ module.exports.notImp=function(req,res){
             sub_title : "Not Important Tasks"
         }) ;
 
-    }); 
+    }).sort({striked: 1}); 
 };

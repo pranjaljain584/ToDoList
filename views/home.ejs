@@ -128,15 +128,42 @@
                         
                         <ul>
                             <% for(let i of task_list){ %>
+
                                 <a role="button">
-                                    <li class="task-list det-btn" data-name="<%= i.taskName %>" data-date="<%= i.taskDate %>" data-category="<%= i.category %>" data-description="<%= i.description %>" data-priority="<%= i.priority %>" data-id="<%= i._id %>">
-                                        <input type="checkbox">
-                                        <div class="d-inline-block">
+                                    <li class="task-list det-btn" data-name="<%= i.taskName %>" data-date="<%= i.taskDate %>" data-category="<%= i.category %>" data-description="<%= i.description %>" data-striked="<%= i.striked %>" data-priority="<%= i.priority %>" data-id="<%= i._id %>">
+                                        <input type="checkbox" disabled>
+                                        <div class="d-inline-block <%= i.striked ? 'strike' : '' %>" id="t-det">
                                             <span><%= i.taskName %></span>
                                             <p><%= i.taskDate %></p>
                                         </div>
                                     </li>
                                 </a>
+
+                                <!-- longer way -->
+                                <!-- <% if(i.striked){ %>
+
+                                    <a role="button">
+                                        <li class="task-list det-btn" data-name="<%= i.taskName %>" data-date="<%= i.taskDate %>" data-category="<%= i.category %>" data-description="<%= i.description %>" data-striked="<%= i.striked %>" data-priority="<%= i.priority %>" data-id="<%= i._id %>">
+                                            <input type="checkbox" disabled>
+                                            <div class="d-inline-block strike" id="t-det">
+                                                <span><%= i.taskName %></span>
+                                                <p><%= i.taskDate %></p>
+                                            </div>
+                                        </li>
+                                    </a>
+
+                                <% } else { %>
+
+                                <a role="button">
+                                    <li class="task-list det-btn" data-name="<%= i.taskName %>" data-date="<%= i.taskDate %>" data-category="<%= i.category %>" data-description="<%= i.description %>" data-striked="<%= i.striked %>" data-priority="<%= i.priority %>" data-id="<%= i._id %>">
+                                        <input type="checkbox" disabled>
+                                        <div class="d-inline-block" id="t-det">
+                                            <span><%= i.taskName %></span>
+                                            <p><%= i.taskDate %></p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <% } %> -->
                             <% } %>
                         </ul>
 
@@ -162,11 +189,11 @@
                             
                             <div class="row">
 
-                                <a href="" class="d-inline btn-lg btn-danger col-6 btn" id="delete-task-btn">
+                                <a class="d-inline btn-lg btn-danger col-6 btn" id="delete-task-btn">
                                     <i class="fas fa-trash-alt"></i> &nbsp; Delete Task 
                                 </a>
         
-                                <a href="" class="d-inline btn-lg btn-outline-info col-6 btn" id="delete-task-btn">
+                                <a class="d-inline btn-lg btn-outline-info col-6 btn" id="comp-task-btn">
                                     <i class="fas fa-check"></i> &nbsp; Mark As Done
                                 </a>
 
